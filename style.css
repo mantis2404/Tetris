@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shizuru&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.color{
+    background: rgb(0, 0, 0);
+    color: white;
+    border-color: white;
+}
+
+#screen{
+    flex-wrap: wrap;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#grid-area{
+    height: 80vmin;;
+    width: 60vmin;
+    display: grid;
+    grid-template-rows: repeat(20,1fr);
+    grid-template-columns: repeat(20,1fr);
+    border: 2px solid ;
+}
+
+.shapes{
+    border: 1px solid rgb(0, 0, 0);
+}
+
+#logo{
+    position: relative;
+    height: 100px;
+    width: 24vw;
+}
+
+#details{
+    padding:10px 10px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    align-items: center;
+    position: relative;
+    height: 70vh;
+    width: 24vw;
+    border: 2px solid ;
+    font-family: 'Roboto Mono', monospace;
+
+}
+
+#score{
+    margin-top: 20px;
+    font-size: 35px;
+    padding-left: 20px;
+}
+#next{
+    margin-top: 20px;
+    height: 150px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px dashed ;        
+    font-family: 'Roboto Mono', monospace;
+}
+
+#nextblock{
+    height: 120px;
+    width: 120px;
+    display: grid;
+    grid-template-rows: repeat(5,1fr);
+    grid-template-columns: repeat(5,1fr);   
+}
+
+#scoreboard{
+    font-size: 35px !important;
+}
+
+.mode{
+    cursor: pointer;
+    font-size: 40px !important;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+#modes{
+    position: absolute;
+    height: 50px;
+    width: 50px;
+}
+
+.light-mode{
+    visibility: hidden;
+}
+
+.arrows{
+    font-size: 40px !important;
+    border: 1px solid;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    user-select: none;
+}
+
+#instructions{
+    border: 1px solid;
+    height: 70vmin;
+    width: 50vmin;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    border-radius: 10px;
+}
+
+#bottom-row{
+    bottom: 50px;
+    position: absolute;
+    height: 100px;
+    width: 49vmin;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around ;
+    align-items: center;
+}
+
+#up{
+    position: absolute;
+    bottom: 130px;
+}
+
+.info{
+    font-size: 15px;
+    height: 40px;
+    width: 65px;
+    font-family: 'Acme', sans-serif;
+}
+
+#bottom-redo,#bottom-info{
+    position: absolute;
+    bottom: 0px;
+}
+
+#bottom-info{
+    width: 100px;
+}
+
+#up-redo ,#up-info{
+    position: absolute;
+    bottom: 140px;
+    left: 40px;
+}
+
+#up-redo{
+    left: 100px;
+}
+
+#spacebar{
+    cursor: pointer;
+    user-select: none;
+    width: 48vmin;
+    height: 32px;
+    font-size: 25px;
+    background-color: white;
+    color: black;
+    font-family: 'Roboto Mono', monospace;
+    border-radius: 5px;
+    position: absolute;
+    top: 150px;
+    font-weight: 700;
+    border: 1px solid black;
+    padding: 0px 15px;
+    box-sizing: border-box;
+}
+
+#space-redo{
+    position: absolute;
+    top: 120px;
+    transform: scaleX(-1);
+}
+
+#space-info{
+    position:absolute;
+    top: 100px;
+    left:50px;
+    width: 100px;
+}
+
+#gameover{
+    position: absolute;
+    visibility: hidden;
+/* background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%); */   cursor: pointer;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+marquee{
+    position: absolute;
+    visibility: hidden;
+    top: 20px;
+    font-size: 20px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+#gameover p{
+    z-index: 100;
+    position: absolute;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    background: linear-gradient(to right,black,white,yellow,#fa1d72, #f32170,#ffeb07,#2196f3,#ff00eb) ;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 20em;
+    font-family: 'Staatliches', cursive;
+    font-weight: bolder;
+    padding-left: 100%;
+    animation: move 10s linear infinite;
+}
+
+@keyframes move{
+    0%{
+        transform: translate(0%,0%);
+    }
+    100%{
+        transform: translate(-100%,0%);
+    }
+}

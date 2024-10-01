@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body class="color" id="body">
+    <div id="modes">
+        <span class="material-icons mode" id="light">
+            light_mode
+        </span>
+        <span class="material-icons mode light-mode" id="dark">
+            dark_mode
+        </span>
+    </div>
+    <div id="gameover"><p>GAME OVER</p></div>
+    <div id="screen">
+        <div id="instructions">
+            <marquee id="again">CLICK TO PLAY AGAIN <span class="material-icons">
+                east
+                </span></marquee>
+            </span>
+            <span  id="spacebar">SPACE BAR</span>
+            <div id="space-info" class="info">PRESS THIS FOR HARD DROP</div>
+            <span class="material-icons" id="space-redo">
+                undo
+            </span>
+            <span class="material-icons arrows" id="up">
+                arrow_upward
+            </span>
+            <span class="material-icons" id="up-redo">
+                redo
+            </span>
+            <div class="info" id="up-info">PRESS THIS TO ROTATE</div>
+            <br>
+            <div id="bottom-row">
+                <div class="info" id="left-info">PRESS THIS TO MOVE LEFT</div>
+                <span class="material-icons">
+                    undo
+                </span>
+                <span class="material-icons arrows" id="left">
+                    arrow_back
+                </span>
+                <hr>
+                <span class="material-icons arrows" id="down">
+                    arrow_downward
+                </span>
+                <hr>
+                <span class="material-icons" id="bottom-redo">
+                    south
+                    </span>
+                <span class="material-icons arrows" id="right">
+                    arrow_forward
+                </span>
+                <span class="material-icons">
+                    redo
+                </span>
+                <div class="info" id="right-info">PRESS THIS TO MOVE RIGHT</div>
+            </div>
+            <div class="info" id="bottom-info">PRESS THIS FOR SOFT DROP</div>
+        </div>
+        <div id="grid-area">
+
+        </div>
+        <div id="details">
+            <img src="tetris.png" id="logo">
+            <div id="score"><span class="material-icons" id="scoreboard">
+                    scoreboard
+                </span><span id="scores">SCORE: 0</span></div>
+            <div id="next">NEXT
+                <div id="nextblock"><div></div>
+            <div></div></div>
+            <div></div></div>
+            <div></div></div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>
